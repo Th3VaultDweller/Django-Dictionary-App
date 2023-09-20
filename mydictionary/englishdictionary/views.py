@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from PyDictionary import PyDictionary
+# from PyDictionary import PyDictionary
+from PyMultiDictionary import MultiDictionary
 # Create your views here.
 
 def base(request):
@@ -8,13 +9,13 @@ def base(request):
 
 def word_info(request):
     "Репрезентация страницы с информацией по искомому слову"
-    dictionary = PyDictionary()
+    dictionary = MultiDictionary()
     if request.method == 'POST':
         word = request.POST['word']
-        meaning = dictionary.meaning(word)
-        antonyms = dictionary.antonym(word)
-        synonyms = dictionary.synonym(word)
-        translation = dictionary.translate(word, 'ru')
+        meaning = dictionary.meaning('en', word)
+        antonyms = dictionary.antonym('en', word)
+        synonyms = dictionary.synonym('en', word)
+        translation = dictionary.translate('ru', word)
 
         return render(request, 'word_info.html', 
                       {'word': word, 
