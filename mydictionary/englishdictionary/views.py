@@ -2,6 +2,7 @@ from django.shortcuts import render
 from PyDictionary import PyDictionary
 # Create your views here.
 
+
 def base(request):
     "Репрезентация начальной страницы словаря"
     return render(request, 'base.html')
@@ -11,13 +12,13 @@ def word_info(request):
     search = request.GET.get('search')
     dictionary = PyDictionary()
     meaning = dictionary.meaning(search)
-    synonyms = dictionary.synonym(search)
     antonyms = dictionary.antonym(search)
+    synonyms = dictionary.synonym(search)
 
     context = {
-        'meaning': meaning, 
+        'meaning': meaning['Noun'][0],
         'synonyms': synonyms,
-        'antonyms': antonyms
+        'antonyms': antonyms,
     }
 
     return render(request, 'word_info.html', context)
