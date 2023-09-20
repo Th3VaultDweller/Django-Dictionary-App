@@ -14,18 +14,14 @@ def word_info(request):
         meaning = dictionary.meaning(word)
         antonyms = dictionary.antonym(word)
         synonyms = dictionary.synonym(word)
-
-        # context = {
-        #     'meaning': meaning['Noun'][0],
-        #     'synonym': synonyms,
-        #     'antonym': antonyms,
-        # }
+        translation = dictionary.translate(word, 'ru')
 
         return render(request, 'word_info.html', 
                       {'word': word, 
-                       'meaning': meaning, 
-                       'antonym': antonyms, 
-                       'synonym': synonyms }
+                        'meaning': meaning, 
+                        'antonyms': antonyms, 
+                        'synonyms': synonyms,
+                        'translation': translation }
                        )
     
     return render(request, 'word_info.html')
