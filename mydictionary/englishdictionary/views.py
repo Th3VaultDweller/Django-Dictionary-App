@@ -15,7 +15,7 @@ def word_info(request):
         meaning = dictionary.meaning('en', word)
         antonyms = dictionary.antonym('en', word)
         synonyms = dictionary.synonym('en', word)
-        translation = dictionary.translate('ru', word)
+        translation = dictionary.translate('en', word, to='ru')
 
         return render(request, 'word_info.html', 
                       {'word': word, 
