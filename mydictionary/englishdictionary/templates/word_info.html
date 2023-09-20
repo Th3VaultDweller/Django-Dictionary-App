@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
-                <form class="d-flex" role="search">
+                <form action="word_info" class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Type a word here" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -50,9 +50,9 @@
         <tbody>
             <tr>
                 <th scope="row">The word should be here</th>
-                <td>The meaning should be here</td>
-                <td>The synonym should be here</td>
-                <td>The antonym should be here</td>
+                <td>{{ meaning }}</td>
+                <td>{{ synonyms }}</td>
+                <td>{{ antonyms }}</td>
             </tr>
         </tbody>
     </table>
