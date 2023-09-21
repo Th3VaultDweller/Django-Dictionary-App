@@ -18,11 +18,11 @@ def word_info(request):
         translation = dictionary.translate('en', word, to='ru')
 
         return render(request, 'word_info.html', 
-                      {'word': word, 
-                        'meaning': meaning, 
-                        'antonyms': antonyms, 
-                        'synonyms': synonyms,
-                        'translation': translation }
-                       )
+                {'word': word, 
+                    'meaning': meaning, 
+                    'antonyms': antonyms, 
+                    'synonyms': synonyms,
+                    'translation': translation}
+                )
     
     return render(request, 'word_info.html')
