@@ -19,10 +19,10 @@ def word_info(request):
 
         return render(request, 'word_info.html', 
                 {'word': word, 
-                    'meaning': meaning, 
-                    'antonyms': antonyms, 
-                    'synonyms': synonyms,
-                    'translation': translation}
+                'meaning': meaning, 
+                'antonyms': antonyms, 
+                'synonyms': synonyms,
+                'translation': translation}
                 )
     
     return render(request, 'word_info.html')
