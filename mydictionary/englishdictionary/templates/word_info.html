@@ -64,7 +64,10 @@
                     {{antonym}}<br>
                     {% endfor %}
                 </td>
-                <td>{{translation}}</td>
+                <td>{% for i in translation %}
+                    {{i}}<br>
+                    {% endfor %}
+                </td>
             </tr>
         </tbody>
     </table>
