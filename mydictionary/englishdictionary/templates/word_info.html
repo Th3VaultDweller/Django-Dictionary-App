@@ -60,7 +60,10 @@
                 <td>{% for synonym in synonyms %}
                     {{synonym}}<br>
                     {% endfor %}
-                <td>{{antonyms}}</td>
+                <td>{% for antonym in antonyms %}
+                    {{antonym}}<br>
+                    {% endfor %}
+                </td>
                 <td>{{translation}}</td>
             </tr>
         </tbody>
