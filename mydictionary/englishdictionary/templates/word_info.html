@@ -56,7 +56,10 @@
         <tbody>
             <tr>
                 <th scope="row">{{ word }}</th>
-                <td>{{meaning}}</td>
+                <td>{% for i in meaning %}
+                    {{i}}<br>
+                    {% endfor %}
+                </td>
                 <td>{% for synonym in synonyms %}
                     {{synonym}}<br>
                     {% endfor %}
