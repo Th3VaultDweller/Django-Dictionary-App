@@ -47,17 +47,19 @@
         <thead>
             <tr>
                 <th scope="col">Word</th>
-                <th scope="col">Meaning</th>
-                <th scope="col">Synonym</th>
-                <th scope="col">Antonym</th>
-                <th scope="col">Translation</th>
+                <th scope="col">Meanings</th>
+                <th scope="col">Synonyms</th>
+                <th scope="col">Antonyms</th>
+                <th scope="col">Translations</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row">{{ word }}</th>
                 <td>{{meaning}}</td>
-                <td>{{synonyms}}</td>
+                <td>{% for synonym in synonyms %}
+                    {{synonym}}<br>
+                    {% endfor %}
                 <td>{{antonyms}}</td>
                 <td>{{translation}}</td>
             </tr>
