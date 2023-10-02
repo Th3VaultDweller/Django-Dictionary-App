@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Young+Serif&display=swap');
 
 body {
-    font-family: 'Young Serif', serif;
-    font-size: medium;
+    font-family: 'Roboto Slab', serif;
 }
